@@ -148,4 +148,23 @@ print(dummy);
 _____________________________________________________________________
 
 
+
+			late & ?
+
+	they both can be used to define variables without assigning any values.
+
+		String? a;
+	
+			OR
+
+		late String a;
+
+
+
+_____________________________________________________________________________
+
+
+
+			
+
 	
