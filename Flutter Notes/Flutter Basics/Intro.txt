@@ -1,0 +1,63 @@
+For Installation process follow the Official Documentation
+
+_________________________________________________
+
+INSTALLING THE APP or CREATING:
+
+	flutter create first_app
+
+
+Now install VS Code bcz Android Studio is a bit heavy
+
+EXTENSIONS:
+	
+	flutter
+	dart
+	Material Icon theme
+	Prettier
+
+
+
+_________________________________________________
+
+RUNNING VS CODE app on ANDROID EMULATOR
+
+	VS Code Terminal => flutter run
+
+
+If you are getting error for "jdk" then Google => jdk 8 => download jdk and install it
+
+Now again run
+
+	flutter run
+
+You need to open the Android emulator from AVD => so that flutter run shows your app there
+
+
+_________________________________________________
+
+
+Material Design use by Flutter => also works on IOS
+
+Apple Styled (Cupertino) widgets 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

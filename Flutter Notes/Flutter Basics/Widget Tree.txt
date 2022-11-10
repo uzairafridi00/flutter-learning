@@ -1,0 +1,145 @@
+Scaffold() => creating a base page design of app
+
+
+
+class MyApp extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text('My First App'),
+        ),
+        body: Text('This is my default text!'),
+      ),
+    );
+  }
+}
+
+
+_______________________________________________
+
+
+body() => the widget which display the body of app.
+	  but it doesn't take more than one argument
+
+	  
+
+	Different Types of Widgets
+
+	1) Output & Input (Visible) => RaisedButton(), Text(), Card(),....
+		Drawn onto screen: "What the user sees"
+	
+	2) Layout & Control (Invisible)
+		Row(), Column(), ListView()
+		
+		Give your app structure and control how visible widgets are drawn onto the screen
+		(indirectly invisible)
+
+
+	3) Container()  
+
+
+
+
+_____________________________________________
+
+
+
+	ADDING LAYOUT WIDGETS
+
+
+Column() => render widgets in columns
+
+	body: Column(children: <Widget>[],),     => List of Widgets
+
+	body: Column(children: [
+		Text('The Question'),
+		ElevatedButton(child: Text('Click me'), onPressed: null),
+	],),
+	
+	
+
+__________________________________________________
+
+	LIST Data Structure
+
+[] => list = Data Structure => contains list of data of same type
+	list of Strings, integers 
+
+
+
+ var questions = [
+    'What\'s your favorite color?',
+    'What\'s your favorite animal?',
+  ];
+
+
+	
+	ACCESSING THE LIST ELEMENT
+
+Text(questions.elementAt(0))
+Text(questions[0])
+
+
+
+__________________________________________________
+
+
+
+	All the functions should be inside your class so that Widget should stand alone
+
+	Inside your class MyApp
+
+
+
+void answerQuestion() {
+	print('Answer Choosen');
+}
+
+
+onPressed: answerQuestion,     => we are passing a pointer of function to flutter => This is the name of function
+					when user pressed it then execute it.
+
+
+onPressed: answerQuestion()	=> Here the button will execute by Flutter => no control with User
+
+
+
+
+
+
+_________________________________________________________
+
+
+
+	Anonymous Function
+
+	If you need any function just to use at only one place and not using any other place
+	then we use anonymous function.
+
+
+onPressed: () => print('Answer 2 Choosen')           // If you have only statement in function
+
+onPressed: () { // Multiple Lines }
+
+
+
+
+
+________________________________________________________
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+

@@ -1,0 +1,151 @@
+		Passing Callback Functions Around
+
+
+	Everything in Flutter is an object. 
+
+	Lifting the State up.
+
+	We can also pass the pointer to function of Widget.
+	
+	You can pass the function to your Widget.
+
+	The function (address) we are passing around is also known as a "Callback" -
+	because the receiving widget calls it the future.
+
+	// And in the Widget you then accept the pointer that is passed.
+
+	
+
+final Function selectHandler;
+
+Answer({this.selectHandler});
+
+
+
+	// If you get an error with the "selectHandler" property, you can change 
+
+final Function selectHandler; 
+
+	to
+
+final VoidCallback selectHandler;
+
+		
+	// When Passing the CallBackFunction
+
+Answer(selectHandler:() => answerQuestion()),
+
+___________________________________________________________________________________
+
+
+
+		INTRODUCING MAPS
+
+
+	{} or Map() => Collection of key value pairs 
+
+	{'Key': 'value'} or {1: 'value'} or {1: 12}
+
+	The key and value can be of any type
+
+	
+
+{'questionText': 'What your name?', 'answers': ['black', 'Max', 'Mike']}
+
+
+var questions = [
+	{
+	  'questionText': 'What your name?', 
+	  'answers': ['black', 'Max', 'Mike']
+	}
+]
+
+
+
+
+
+****************** MAPPING LISTS TO WIDGETS ******************
+
+	Accessing the Map Questios
+
+questionText: questions[_questionIndex]['questionText'] as String,
+
+
+
+	Instead of hard coding the Widgets you can dynamically define questions
+	
+
+questions[_questionIndex]['answers'].map((question) {
+	return Answer(answer)
+})
+	
+
+
+	By default Dart doesn't recognize the Lists contained inside map of answers
+	So we explicitly tell to Dart that it is a List of String or int.
+
+
+
+(questions[_questionIndex]['answers'] as List<Strinf>).map((question) {
+	return Answer(answer)
+})		
+
+
+
+____________________________________________________
+
+
+		... => Spread Operator  => 030 -> Watch Again
+	
+	In Dart, Spread Operator (…) and Null-aware Spread Operator (…?) 
+	are used for inserting multiple elements in a collection like Lists, Maps, etc.
+
+
+...(questions[_questionIndex]['answers'] as List<String>).map((answer) {
+              return Answer(selectHandler: answerQuestion, answerText: answer);
+}).toList()
+
+
+
+___________________________________________________
+
+
+
+			Final vs Const
+
+	final => use final if a value doesn't change from the point of time when the program runs.
+		it can be initialized with the value.
+
+	
+
+	const a = const 'a'
+	 
+ 	We can write const infront of variable and also infront of value.
+	If we write it infront of variable then the variable will be constant and if with the value then the
+	value will be constant.
+
+	
+
+	Dart store everything as an object in memory.
+	Variables are just the pointer to objects
+	
+	We store an object in variable => technically we store an address of object in variable.
+
+	
+
+var dummy = const ['Hello'];
+dummy.add('Hi');
+print(dummy);
+
+
+	It will throw error because we initialized the value as Const 
+	and after updating the dummy the whole list created again 
+	
+	So only make value const in those cases when you know that I will not change it in future.
+
+	
+
+_____________________________________________________________________
+
+
+	

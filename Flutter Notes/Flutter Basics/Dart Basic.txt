@@ -1,0 +1,206 @@
+	dartpad => web based playground where you can practice dart.	
+
+_________________________________________
+
+	Function
+	
+	This function doesn't take any arg
+
+void main() {
+  for (int i = 0; i < 5; i++) {
+    print('hello ${i + 1}');
+  }
+}
+
+
+	Dart is a typed language that everything in Dart is a typed.
+
+	void => type function -> it returns nothing 
+
+	main() => is a special function => dart calls the main function by default when you run the app
+
+	main.dart => is also a special file which flutter look
+
+
+
+void main() {
+
+}
+
+
+	This is the function which flutter calls or run for first time. You need to put all the code or widgets
+	inside main function.
+
+	You can also add more function instead of main.
+
+	Follow camelCase convention in your code.
+
+
+
+addNumbers(num1, num2) {
+	num1 + num2;
+}
+ 
+
+addNumbers(num1, num2) {
+	print(num1 + num2);
+}
+
+int addNumbers(num1, num2) {
+	return num1 + num2;
+}
+
+double addNumbers(num1, num2) {
+	return num1 + num2;
+}
+
+void main() {
+	addNumbers(1,2);
+
+	print("Hello");
+}
+
+
+
+_______________________________
+
+
+DATA Types:
+	int, float, double, String
+
+	String name;
+
+_______________________________
+
+
+DEFINING VAR:
+	
+	var b;
+	
+var a = addNumber(1,2);
+
+
+	You can also define the exact data type of variable by telling 
+	
+	int, float, double, string
+
+
+
+	Everything in Dart is Object.
+
+	
+
+
+
+CREATING OBJECTS:
+
+	class defines a blue print for object.
+
+class Person {
+	String name;
+	int age;
+}
+
+
+	Creating new instance of class.
+
+var p1 = Person();	
+p1.name = 'Uzair';
+p1.age = '12';
+	
+	
+
+_______________________________________
+
+
+class Student extends Person {
+
+}
+
+
+_____________________________________
+
+
+	CLASS CONSTRUCTOR:
+
+
+class Person {
+	String name;
+	int age;
+	
+	// Constructor
+	Person(String inputName, int inputAge) {
+		name = inputName;
+		age = inputAge;
+	}
+}
+
+
+	// OR We Can also write like this
+	//
+
+class Person {
+	String name;
+	int age;
+	
+	// Constructor
+	Person(String name, int age) {
+		this.name = name;
+		this.age = age;
+	}
+}	
+
+
+
+============ OPTIONAL Constructor ================
+============ Pass Arg or Leave ===================
+
+
+class Person {
+	String name;
+	int age;
+	
+	// Constructor
+	Person({String name, int age}) {
+		this.name = name;
+		this.age = age;
+	}
+}	
+		
+
+
+var p1 = Person(inputName: 'uzair', age: 21)
+
+
+
+======================= Default and Required ================
+
+	@required => Required Argument
+
+
+class Person {
+	String name;
+	int age;
+	
+	// Constructor
+	Person({@required String name, @required int age = 0}) {
+		this.name = name;
+		this.age = age;
+	}
+}
+
+__________________________________________
+
+
+======================== SHORT CUT of CONSTRUCTOR =====================
+
+
+
+class Person {
+	String name;
+	int age;
+	
+	// Constructor
+	Person({this.name, this.age = 12})
+}
+

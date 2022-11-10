@@ -1,0 +1,109 @@
+	Good convention is that make one Widget in one file
+	if there is two widgets which work together than you can keep both of them
+
+	Generally we have one widget in one file
+
+
+
+st  => Code Snippet to create the Stateless or Statful functions
+
+___________________________________________________________________
+
+
+	Make another file
+	
+	"question.dart"  => to contain question widgets displayed on Screen
+
+
+import 'package:flutter/material.dart';
+st 
+
+
+	
+	We need to import our custom package
+
+
+import './question.dart';
+
+
+	
+	We need to convert our app in smaller widgets so that it can be easily maintanable
+	Also by efficiency wise it becomes good.
+
+
+
+	First write the name of parameter
+
+Question(questionText: passing_Value_to_Param)
+
+
+______________________________________________________________________
+
+
+
+	STYLE
+
+
+Text('dasdas', style: TextStyle (fontSize: 28), textAlign: TextAlign.center);
+
+
+
+
+			CONTAINER
+
+	Text Will not center with this because by default the Text Widget just take
+	the space it takes.
+
+	So for we wrap the Text Widget in Container Widget.
+
+
+Container(
+	width: double.infinity,
+	child: Text()
+)
+
+
+
+	By Writing width with infinity so the Text widget gets the whole space of app.
+	Then Text will be in center.
+
+
+
+margin: EdgeInsets.all(10)
+
+
+__________________________________________________________
+
+
+
+****************** ENUMS & Multiple Constructors ****************************
+
+	Dart allows you to create multiple constructor in class.
+	Each constructor initiate different objects with different configuration
+
+	
+
+class Person {
+	String name;
+	int age;
+
+	Person({this.name, this.age});
+
+	Person.veryOld(this.name) {
+		age = 60;
+	}
+}
+
+
+var3 p1 = Person(name: 'Max', age: 12);
+var2 p2 = Person.veryOld('Max');
+
+
+______________________________________________________________________
+
+
+
+
+
+
+

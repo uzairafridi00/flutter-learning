@@ -1,0 +1,75 @@
+import 'package:flutter/material.dart';
+
+	it has alot of builtin widgets
+
+
+StatelessWidget
+StatefullWidget
+
+
+
+class MyApp extends StatelessWidget {}
+
+
+	Functions inside the classes
+
+	Variables inside the class is called properties
+	Functions inside the class are called methods
+
+
+
+
+
+_______________________________________
+
+
+class MyApp extends StatelessWidget() {
+	build(BuildContext context) {
+		return MaterialApp();
+	}
+}
+
+
+
+	build here returns the Widget. Flutter calls it when it draws something.
+
+	MaterialApp() => requires named argument
+	
+	MaterialApp(home: Text('Hello'),);
+
+
+
+
+__________________________________________
+
+
+
+	CLASS CONSTRUCTORS:
+
+
+class Person {
+	String name;
+	int age;
+
+	Person({this.name, this.age});
+}
+
+
+___________________________________________
+
+
+	@override   => decorator
+
+	Provided by flutter which makes our code a bit cleaner and clear
+
+
+__________________________________________
+
+
+void main() => runApp(MyApp())
+
+
+__________________________________________
+
+
+	

@@ -1,0 +1,79 @@
+	State
+
+State is Data/Information used by your app
+
+
+	App State
+
+Authenticate Users, Loaded Jobs
+
+
+	Widget State
+
+Current User Input
+isLoading Spinner being shown
+
+
+___________________________________________
+
+
+StatelessWidget and StatefullWidget
+
+
+State => is a generic class by flutter
+
+	
+	We do make two classes for this to change the state by User Input
+	because we want to persistant our previous states data
+	so that it can build statefulWidget
+
+
+	It will build connection between StatefulWidget and State Widget
+
+
+class MyApp extends StatefulWidget {
+
+	@override
+	State<StatefulWidget> createState() {
+		return MyAppState();
+	}
+}
+
+class MyAppState extends State<MyApp> {
+	
+	//All your Code of your Widget
+
+
+	
+	setState(() {
+	
+		// That part of code which will change the UI
+		// A function that force flutter to re-render the interface
+		// It calls build again but not re-render all the UI
+		// It just change or update that part which we changed
+	})
+}
+
+
+
+______________________________________________________
+
+
+	PRIVATE PROPERTIES
+
+	_ => converts the public class to Private class so it will not use outside of file
+
+	Same with Variables add Underscore infront of it.
+
+class _MyAppState extends State<MyApp>
+
+
+___________________________________________________
+
+
+
+
+
+
+
+
