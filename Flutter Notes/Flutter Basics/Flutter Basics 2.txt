@@ -164,7 +164,65 @@ _____________________________________________________________________
 _____________________________________________________________________________
 
 
+			IF Statements
 
-			
+	if() {
+		
+	}
+
+	single line check => ternary operator
+
+
+
+	You can also write conditions in variables and store in it.
+
+
+var hasCorrectCredentials = userName == 'uzair' && pass == 12314;	
+
+void main() {
+  var userName = 'uzar';
+  var pass = 12314;
+  var hasCorrectCredentials = userName == 'uzair' && pass == 12314;
+  if(hasCorrectCredentials) {
+    print('Logged In');
+  } else {
+    print('Failed!');
+  }
+}
+
+	
+	We can use () brackets to specify or combine some conditions	
+
+
+
+
+
+__________________________________________________________________________
+
+
+
+			NULL VALUE & NULL SAFETY
+
+
+	Null Values => is a special kind of built value that it can be very useful when you wanna reset value.
+	
+	Null Safety => Release after 2.11.0 version
+
+
+pubsec.yaml => environment sdk: ">=2.12.0"   => it will on the null safety.
+
+
+
+_________________________________________________________________________________
+
+
+
+			Outputting Widgets Conditionally
+
+		 
+
+
+
+
 
 	
