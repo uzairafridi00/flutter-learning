@@ -235,5 +235,66 @@ body: condition ? column (
 
 
 
+___________________________________________________________________________________
+
+
+
+			SPLITTING THE WIDGETS
+
+	If you want to make your widget tree more readable or more manageable.
+	one thing you should do is splitting the Widget.
+
+	You can split your widget in sub widgets.
+
+	In Flutter it is always encourage to create more than less widget. Also important for performance.
+
+
+required => means that argument is required not miss it.
+
+
+
+	You can divide each and every widgets.
+
+
+
+body: condition ? Quiz() : Result()
+
+
+	The code for Quiz and Result written in sperate files.
+	And pass the data between these two with the help of constructors.
+
+
+____________________________________________________________
+
+
+		Multiple Constructors
+
+
+class Player {
+  final String name;
+  final String color;
+
+  Player(this.name, this.color);
+
+  Player.fromPlayer(Player another) :
+    color = another.color,
+    name = another.name;
+}
+
+
+
+____________________________________________________________
+
+
+
+
+	
+
+
+
+
+
+
+	
 
 	
