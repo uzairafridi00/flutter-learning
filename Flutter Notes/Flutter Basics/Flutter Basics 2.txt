@@ -218,9 +218,20 @@ ________________________________________________________________________________
 
 
 			Outputting Widgets Conditionally
+		
+			TERNARY Operator
+
+	
+
+body: condition ? column (
+	
+	// All Your Code lies here
+
+) : Center(child: Text('You did it!'))
 
 		 
 
+	condition ? some code : else code;
 
 
 
