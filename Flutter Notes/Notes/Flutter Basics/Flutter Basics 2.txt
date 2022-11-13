@@ -330,6 +330,28 @@ ______________________________________________________
 		With the help of this we can wrap different widgets with different
 		flutter Widgets.
 
+	
+
+__________________________________________________
+
+	
+	ElevatedButton
+	TextButton
+	OutlinedButton
+
+
+style: ButtonStyle {
+
+	backgroundColor: MaterialStateProperty.all(Colors.blue)
+
+}
+
+
+
+style: OutlinedButton.styleFrom(primary: Colors.orange, side: BorderSide(color: Colors.orange))
+
+
+
 
 
 
