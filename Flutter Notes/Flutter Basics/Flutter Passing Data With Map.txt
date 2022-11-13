@@ -1,0 +1,86 @@
+final _questions = const [
+    {
+      'questionText': 'What\'s your favorite color?',
+      'answers': [
+        {'text': 'Black', 'score': 10},
+        {'text': 'Red', 'score': 5},
+        {'text': 'Blue', 'score': 6},
+        {'text': 'Green', 'score': 8}
+      ]
+    },
+]
+
+
+
+
+		// The above List of map contains 
+		// String with objects -> map
+		// so here we call this 'dynamic' to avoid errors
+
+			
+
+	List<Map<String, dynamic>>
+
+
+	
+__________________________________________________________________
+
+
+
+
+
+void _answerQuestion(int score) {
+    _totalScore = _totalScore + score;
+    // _totalScore += score;
+
+    setState(() {
+      _questionIndex = _questionIndex + 1;
+    });
+}
+
+
+
+	
+	// As we pass int argument in function so in Child Widget
+	// we have to set the IntCallback explicitly 
+	// with typedef
+
+
+	// Step 1: Define a Callback.
+
+typedef IntCallback = void Function(int id);
+
+
+	// Now get the function with IntCallback
+
+final IntCallback answerQuestion;
+
+
+	// Pass it to Constructor
+
+
+	// Now Access the function with arrow function
+
+
+selectHandler: () => answerQuestion(answer['score'])
+
+
+
+________________________________________________________________
+
+
+	// Final Code
+
+
+...(questions[questionIndex]['answers'] as List<Map<String, dynamic>>)
+            .map((answer) {
+          return Answer(
+              selectHandler: () => answerQuestion(answer['score']),
+              answerText: answer['text'] as String);
+    }).toList()
+
+
+ 
+
+
+	

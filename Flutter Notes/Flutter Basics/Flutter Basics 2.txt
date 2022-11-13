@@ -286,10 +286,49 @@ class Player {
 ____________________________________________________________
 
 
-	39 video - 2nd folder
+			Get Function => Returns the Value to variable
+			Set Function => Set the value to Variable
+
+
+return_type get field_name{
+    ...
+}
+
+
+set field_name{
+    ...
+}
+
+
+
+String get resultPhrase {
+    
+    String resultText;
+
+    if (resultScore <= 8) {
+      resultText = 'You are Awesome';
+    } else if(resultScore <=12) {
+      resultText = "Pretty Likeable";
+    } else if(resultScore <= 16) {
+      resultText = "You are Brilliant";
+    } else {
+      resultText = 'You are so bad';
+    }
+
+    return resultText;
+}
+
+
+
+
+______________________________________________________
+
 		
 	
+		Refactoring => ctrl + Shift + R
 
+		With the help of this we can wrap different widgets with different
+		flutter Widgets.
 
 
 
