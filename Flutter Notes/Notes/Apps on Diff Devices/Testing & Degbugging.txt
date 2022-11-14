@@ -1,0 +1,46 @@
+		Running the APP on an IOS Emulator
+
+	You need MAC OS to run the emulator and test the app.
+	For that you need XCode
+
+	Open XCode -> Open Another Project -> navigate to project -> ios folder -> Runner.xcodeproj -> Open this file
+
+	You should have team -> otherwise create account -> give apple credentials
+	
+	For developing IOS apps -> you need to have developer account
+
+
+developer.apple.com
+
+
+	Login with your ID -> For developing and testing you don't need to pay for account
+	
+	For uploading the app to IOS store you need to pay for it.
+
+	Now Choose your team after making developer account.
+
+	In VS Code -> open -a Simulator.app 
+	It opens IOS simulator
+
+	After that IOS simulator -> in VS Code terminal -> flutter run or Run without debugging
+
+
+
+______________________________________________________________________________________________________
+======================================================================================================
+
+
+
+		Running the App on REAL IOS Device
+
+
+	Connect Iphone with connector to MAC OS device
+	If it doesn't show in VS Code -> then open XCode 
+	change the device to your Device.
+
+	
+
+
+______________________________________________________________________________________________________
+======================================================================================================
+	

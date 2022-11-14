@@ -1,0 +1,47 @@
+		Solving Erros and Debugging
+
+	one of the most common error is Syntax Error.
+	
+	There are errors which identified by your IDE which popups after your app runs
+	When you get the error in debug console then directly go to top
+	because at the top it gives helpful messages, at the beginning
+
+
+________________________________________________________________________________________
+========================================================================================
+
+
+		USING the Debugger
+
+	When you get to know that your app is behaving differently just use print()
+
+print(var)
+
+	at which it behaves strange.
+
+	
+
+	Sometimes we have complex problems which we can't solve, so you can run the app in
+	
+	Debug Mode
+
+
+	View -> tab  ==> You can switch between debug mode to Explorer Mode and vice versa
+
+	You can add the breakpoint at your app
+
+	After implementing the breakpoint you can use the Run bar to go forward to excute another code block.
+
+
+
+________________________________________________________________________________________
+========================================================================================
+
+
+		DART DevTools
+
+
+	The best idea is to avoid debugging because it adds extra code which can slow your app.
+	Go to debug mode when you have complex problem or logic and you don't know what's going on.
+
+	3rd -> 008	
