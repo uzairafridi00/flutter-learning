@@ -44,4 +44,12 @@ ________________________________________________________________________________
 	The best idea is to avoid debugging because it adds extra code which can slow your app.
 	Go to debug mode when you have complex problem or logic and you don't know what's going on.
 
-	3rd -> 008	
+	ctrl + Shift + P  => To bring up the command panel
+
+	>dart devtools => To show the Widget tree -> and can learn more about the widgets
+	
+
+		
+		REPAINT RAINBOW
+
+	
