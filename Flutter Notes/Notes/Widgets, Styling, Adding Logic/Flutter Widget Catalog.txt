@@ -1,0 +1,45 @@
+		**** Flutter Widget Catalog ****
+
+		https://docs.flutter.dev/development/ui/widgets
+
+	Official docs of all widgets. You can learn more about Widgets.
+	
+		Most Important Widgets are,
+
+			**** App / Page Setup Widgets ****
+	
+	MaterialApp / CupertinoApp, Scaffold / CupertinoPageScaffold
+	
+
+			**** LAYOUT Widgets ****
+
+	Container, Row, Column
+
+			
+			**** ROW / Column Children ****
+
+	Flexible , expanded, 
+
+
+			**** CONTENT CONTAINERS ****
+
+	Stack, Card 
+
+
+			**** REPEAT ELEMENTS ****
+
+	ListView, GridView, ListTile
+
+	
+			**** Content Types **** 
+
+	Text, Image, Icon
+
+
+			**** USER INPUT ****
+
+	TextField, TextButton, ElevatedButton, GestureDetector, InkWell,
+
+
+______________________________________________________________________________________
+======================================================================================
