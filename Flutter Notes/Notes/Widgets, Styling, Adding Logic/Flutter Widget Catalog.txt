@@ -43,3 +43,13 @@
 
 ______________________________________________________________________________________
 ======================================================================================
+
+
+
+	width: double.infinity     // Takes full Width of Screen
+
+		
+		// Both are used to Align the items		
+
+	crossAxisAlignment
+	mainAxisAlignment
