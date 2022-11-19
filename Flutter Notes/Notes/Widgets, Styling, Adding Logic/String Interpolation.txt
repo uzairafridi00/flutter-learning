@@ -1,0 +1,9 @@
+'${tx.amount}'
+
+	OR
+
+'A: ' tx.amount
+
+
+
+'\$${tx.amount}'
