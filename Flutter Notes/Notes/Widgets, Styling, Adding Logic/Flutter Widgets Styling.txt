@@ -1,0 +1,56 @@
+
+
+	width: double.infinity     // Takes full Width of Screen
+
+		
+		// Both are used to Align the items in ROWS AND COLUMNS	
+
+	crossAxisAlignment
+	mainAxisAlignment
+
+
+______________________________________________________________________________
+==============================================================================
+
+
+	You can't directyl apply margin and padding to Card Widget.
+	For this reason you need to wrap your Column, row or Card Widget 
+	in Container to apply styles.
+
+	ctrl + shift + R      // Refactoring the Widget or Wrapping shortcut
+
+
+padding: EdgeInsets.all(10)
+
+______________________________________________________________________________
+==============================================================================
+
+
+	TextField() => Contains alot of Pre-defined methods.
+
+	You can go throw them with official documentation
+
+
+TextField(decoration: InputDecoration(labelText: 'Title'),),
+
+FlatButton(child:Text('Add'), textColor.purple, onPressed: () {})
+
+
+	onPressed: () {}           // Anonymous Function
+
+
+
+	For moving button to the right, give crossAxisAlignment to Column
+	to shift button to the right.
+
+
+
+______________________________________________________________________________
+==============================================================================
+
+
+	
+
+
+______________________________________________________________________________
+==============================================================================

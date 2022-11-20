@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 import './transaction.dart';
 
@@ -34,12 +35,37 @@ class MyHomePage extends StatelessWidget {
       ),
       body: Column(
           // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          // crossAxisAlignment: CrossAxisAlignment.stretch,
+          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            Container(
+              width: double.infinity,
+              child: Card(
+                color: Colors.blue[200],
+                elevation: 5,
+                child: Text('CHART'),
+              ),
+            ),
             Card(
-              color: Colors.blue[200],
               elevation: 5,
-              child: Container(width: double.infinity, child: Text('CHART')),
+              child: Container(
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Title'),
+                  ),
+                  TextField(
+                    decoration: InputDecoration(labelText: 'Amount'),
+                  ),
+                  TextButton(
+                      onPressed: () {},
+                      child: const Text(
+                        'Add Transaction',
+                        style: TextStyle(color: Colors.purple, fontWeight: FontWeight.bold),
+                      ))
+                ]),
+              ),
             ),
             Column(
               children: transactions.map((tx) {
@@ -74,7 +100,7 @@ class MyHomePage extends StatelessWidget {
                                   fontSize: 16,
                                 )),
                             Text(
-                              tx.date.toString(),
+                              DateFormat.yMMMd().format(tx.date),
                               style:
                                   TextStyle(fontSize: 14, color: Colors.grey),
                             )

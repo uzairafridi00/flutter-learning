@@ -1,0 +1,55 @@
+
+		Date Format Package
+
+	Dart Date Format => Search => intl
+
+	1) Go to pubsec.yaml => file
+	2) Under dependencies -> paste the package names at the same level of flutter depencies
+	3) intl: ^0.15.8 	
+
+			OR
+
+	dart pub add intl
+
+	flutter pub add intl
+
+	
+
+	4) If you save the file flutter will auto install the package.
+	5) If it doesn't install it then run => flutter pacakges get
+	
+	
+import 'package:intl/intl.dart';
+
+DateFormat().format(tx.date)
+
+	OR
+
+DateFormat('yyyy-MM-dd').format(tx.date)
+
+	OR
+
+
+DateFormat('yyyy/MM/dd').format(tx.date)
+
+
+
+	6) We have pre-defined constructors in DateFormat for formatting.
+
+	7) No need of date formatting in strings.
+
+DateFormat.yMMMd().format(tx.date)
+
+
+
+
+______________________________________________________________________________
+
+
+
+		
+
+
+
+
+	

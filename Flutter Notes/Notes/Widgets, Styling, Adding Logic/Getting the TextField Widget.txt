@@ -1,0 +1,40 @@
+
+	// TextInput by default returns String values
+	// You don't need to add String type to onChanged because
+	// by default Dart knows that it returns String value
+
+
+
+String titleInput
+
+TextField(decoration: InputDecoration(labelText: 'Title'),
+	  
+	onChanged: (value) {
+		titleInput = value;
+	} 	
+
+
+		// OR Shortcut
+
+	onChanged: (value) => titleInput = value;
+),
+
+
+
+
+          // TextButton
+
+
+
+TextButton(
+
+onPressed: () {
+	print(titleInput);
+}
+
+child: Text('add')
+)
+
+
+
+
