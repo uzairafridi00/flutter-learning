@@ -37,4 +37,47 @@ child: Text('add')
 
 
 
+___________________________________________________________________
+
+
+	***** SOLTUTION FOR STATELESS WIDGET *****
+
+		TextEditing Controller
+
+
+	We can also TextEditingController to get the values from InputField
+	Because input text field requires StateFulWidget so you to avoid StatefulWidget
+	you can use TextEditingController to handles all changes.
+
+	This controller listens the User Input and store it in variable.
+
+
+final titleController = TextEditingController();
+
+
+TextField(decoration: InputDecoration(labelText: 'Title'), controller: titleController),
+	  
+
+
+
+
+
+
+TextButton(
+
+onPressed: () {
+	print(titleController.text);
+}
+
+child: Text('add')
+)
+
+
+___________________________________________________________________________________
+
+
+
+		
+
+		
 
