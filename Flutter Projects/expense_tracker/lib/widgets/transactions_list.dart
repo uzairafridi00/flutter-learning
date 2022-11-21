@@ -11,24 +11,30 @@ class TransactionList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 450,
+      height: 490,
       width: 340,
       child: ListView.builder(
         itemBuilder: (context, index) {
           return Card(
+              shape: RoundedRectangleBorder(
+                side: BorderSide(
+                  color: Colors.purple.shade100,
+                ),
+                borderRadius: BorderRadius.circular(10.0), //<-- SEE HERE
+              ),
               elevation: 5,
               child: Row(
                 children: [
                   Container(
                     margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
+                    padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
                         border: Border.all(
                       color: Colors.purple,
                       width: 2,
                     )),
-                    padding: EdgeInsets.all(10),
                     child: Text(
-                      'Rs ' + transactions[index].amount.toString(),
+                      'Rs ' + transactions[index].amount.toStringAsFixed(2),
                       // '\$${tx.amount}',
                       style: TextStyle(
                           fontWeight: FontWeight.bold,

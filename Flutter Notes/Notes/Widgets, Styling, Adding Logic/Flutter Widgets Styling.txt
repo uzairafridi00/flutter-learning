@@ -108,20 +108,65 @@ ______________________________________________________________________________
 ==============================================================================
 
 
+		TEXTFIELD
 
+keyboardType: TextInputType.number     // Android
+
+keyboardType: TextInputType.numberWithOptions(decimal:true)      // IOS
+
+
+		// For adding the Transaction with entered
+		// You need to create a function and passed that to TextField with onSubmitted
+
+
+
+void dataEntered() {
+    final titleEntered = titleController.text;
+    final amountEntered = double.parse(amountController.text);
+
+    if (titleEntered.isEmpty || amountEntered <= 0) {
+      return;
+    }
+
+    addTransactionHandler(titleEntered, amountEntered);
+}
+
+
+		// Sometimes flutter will give you an error about void and String Argument
+		// So you can use the _ sign to avoid that issue
+
+onSubmitted: (_) => dataEntered(),
+
+
+
+
+______________________________________________________________________________
+==============================================================================
+			
+			PASSING ARGUMENT BUT DON'T WANT TO ACCEPT IT
+
+(_) => submitDate  => here underscore means that this function accepts the argument but We don't care about it
 
 ______________________________________________________________________________
 ==============================================================================
 
 
+		ADDING ICONS IN FLUTTER
+		
+
+IconButton(onPressed: () {}, icon: Icon(Icons.add))
 
 
-______________________________________________________________________________
-==============================================================================
+	// Icons.  => Will contain all the Icons which will help you in your App making
+	
 
+		// FLOATING ACTION BUTTON
 
-
-
+floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: () {},
+      ),
 ______________________________________________________________________________
 ==============================================================================
 
