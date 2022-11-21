@@ -3,12 +3,18 @@ import 'package:flutter/services.dart';
 
 typedef TxCallback = void Function(String title, double amount);
 
-class NewTransaction extends StatelessWidget {
+class NewTransaction extends StatefulWidget {
   final TxCallback addTransactionHandler;
 
   NewTransaction({super.key, required this.addTransactionHandler});
 
+  @override
+  State<NewTransaction> createState() => _NewTransactionState();
+}
+
+class _NewTransactionState extends State<NewTransaction> {
   final titleController = TextEditingController();
+
   final amountController = TextEditingController();
 
   void dataEntered() {
@@ -19,7 +25,9 @@ class NewTransaction extends StatelessWidget {
       return;
     }
 
-    addTransactionHandler(titleEntered, amountEntered);
+    widget.addTransactionHandler(titleEntered, amountEntered);
+
+    Navigator.of(context).pop();
   }
 
   @override
@@ -30,12 +38,12 @@ class NewTransaction extends StatelessWidget {
         child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
           TextField(
             autocorrect: true,
-            decoration: InputDecoration(labelText: 'Title'),
+            decoration: const InputDecoration(labelText: 'Title'),
             controller: titleController,
             onSubmitted: (_) => dataEntered(),
           ),
           TextField(
-            decoration: InputDecoration(labelText: 'Amount'),
+            decoration: const InputDecoration(labelText: 'Amount'),
             keyboardType: TextInputType.number,
             // inputFormatters: <TextInputFormatter>[
             //   FilteringTextInputFormatter.digitsOnly

@@ -1,1 +1,27 @@
-25 -> 3rd folder
+ 
+
+	// Using this function it will add showModalBottomSheet => Context
+	
+
+void _startAddNewTransaction(BuildContext ctx) {
+    showModalBottomSheet(
+        context: ctx,
+        builder: (_) {
+          return GestureDetector(
+            onTap: () {},
+            behavior: HitTestBehavior.opaque,
+            child: NewTransaction(addTransactionHandler: _addNewTransaction),
+          );
+        });
+  }
+
+
+
+	// With the help of this your sheet will not close anymore
+
+
+GestureDetector(
+            onTap: () {},
+            behavior: HitTestBehavior.opaque,
+            child: NewTransaction(addTransactionHandler: _addNewTransaction),
+);
