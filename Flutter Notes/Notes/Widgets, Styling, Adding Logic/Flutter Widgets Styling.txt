@@ -82,8 +82,27 @@ ______________________________________________________________________________
 ==============================================================================
 
 
+		LIST VIEW WIDGET
+
+	ListView is a column with Scroll View, has infinite height
+	ListView gives us the Scrollable functionality -> remove column and use this
+	
+	You can also decide the ScrollDirection if you want Row Scrollable
+	
+	But with this you can wrap the ListView with Container to give height to avoid infinite height.
+	
+	Always use ListView.builder => because in this flutter only loads the list which is visible.
+	so it will save your memory.
 
 
+
+ListView.builder (
+	itemBuilder: (context, index) {
+		return Card ()     // All your Card -> No need to use map here because builder will do all the work
+	}
+),
+
+itemCount: transactions.length,
 
 ______________________________________________________________________________
 ==============================================================================
