@@ -37,3 +37,76 @@ Widget build(BuildContext context) {
   }
 }
 
+
+__________________________________________________________________
+==================================================================
+
+
+
+			TEXT THEMES
+
+
+	assets/fonts => you can download and paste the fonts in this folder
+			to use in theming the app
+
+
+	Using these fonts you need to go to pubsec.yaml file and uncomment the font
+	example use there and give the name and path of fonts.
+
+
+
+	// PUBSEC.yaml => file configuration
+
+fonts:
+    - family: OpenSans
+      fonts:
+        - asset: assets/fonts/OpenSans-Regular.ttf
+        - asset: assets/fonts/OpenSans-Bold.ttf
+          # style: italic
+          weight: 700
+
+
+
+
+		// Now in theme argument inside themeData
+		// Write the name of font family
+
+fontFamily: 'Quicksand'
+
+
+		// After installing the Fonts you need to run
+
+flutter package get
+
+
+		// in Command Line to avoid errors
+
+
+
+
+
+		// TEXT THEME
+
+
+textTheme: ThemeData.light().textTheme.copyWith(
+              bodyText1: TextStyle(
+                  fontFamily: 'OpenSans',
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18))
+
+
+
+		// Accessing
+
+
+style: Theme.of(context).textTheme.bodyText1
+
+
+
+
+
+
+
+
+
+
