@@ -1,0 +1,39 @@
+		We can directly assign colors to our app
+		but what if we in future want to change the theme of app
+		then it will be headache for us to change the colors at each place.
+
+		To Avoid this issue we have concept called theming 
+
+		Go to main.dart file and under title pass the theme argument.
+
+	theme argument allow us to global application theme colors.
+	combination of colors,fonts, and all the styling contain.
+
+
+primaryColor => Provides a single colors
+primarySwatch => Provides you different shades of color
+
+
+	// Accessing the theme
+
+
+Theme.of(context).primaryColor
+
+
+__________________________________________________________________
+==================================================================
+
+	// Initializing theme 
+
+
+Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Personal Expenses',
+      theme: ThemeData(
+        primarySwatch: Colors.teal,
+      ),
+      home: MyHomePage(),
+    );
+  }
+}
+

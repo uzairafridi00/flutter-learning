@@ -29,17 +29,19 @@ class TransactionList extends StatelessWidget {
                     margin: EdgeInsets.symmetric(vertical: 10, horizontal: 15),
                     padding: EdgeInsets.all(10),
                     decoration: BoxDecoration(
-                        border: Border.all(
-                      color: Colors.purple,
+                      borderRadius: BorderRadius.circular(5),
+                      border: Border.all(
+                      color: Theme.of(context).primaryColorLight,
                       width: 2,
                     )),
                     child: Text(
                       'Rs ' + transactions[index].amount.toStringAsFixed(2),
                       // '\$${tx.amount}',
                       style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          fontSize: 20,
-                          color: Colors.purple),
+                        fontWeight: FontWeight.bold,
+                        fontSize: 20,
+                        color: Theme.of(context).primaryColorDark,
+                      ),
                     ),
                   ),
                   Column(
