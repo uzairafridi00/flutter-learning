@@ -1,0 +1,43 @@
+		Image
+
+Image.asset()  => use it for local images
+
+Image.file()   => obtaining images from files like streaming images
+
+Image.memory()  => 
+
+Image.network()  => Web Image / URL
+
+
+
+______________________________________
+
+		// Also add the image to pubsec.yaml file
+
+
+assets:
+    - assets/images/name.png
+    - assets/images/anotherImage.png
+
+
+Image.asset('assets/images/name.png')
+
+
+
+Image.asset('assets/images/name.png', fit: BoxFit.cover,)
+
+	
+	// Wrap the image in Container because the BoxFit will not sequeeze the
+	// size due to outer container
+	// Give height of 200
+
+
+
+SizedBox(height:10)   => put some space in two containers. We can't see it but add some white spaces
+
+
+
+
+
+
+
