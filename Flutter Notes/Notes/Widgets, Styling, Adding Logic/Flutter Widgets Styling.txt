@@ -186,10 +186,99 @@ Navigator.of(context).pop();
 ______________________________________________________________________________
 ==============================================================================
 
+		STACK Widget
+
+	This allow us to put elements on top of other Widgets in 3D 
+
+	it's a Z-Axis
 
 
 ______________________________________________________________________________
 ==============================================================================
+
+		FITTED BOX  => Widget
+
+	Forces the child into available space
+
+	Creates a widget that scales and positions its child within itself according to [fit]
+
+______________________________________________________________________________
+==============================================================================
+
+		FLEXIBLE => Widget
+
+
+	Creates a widget that controls how a child of a [Row], [Column], or [Flex] flexes.
+
+	Can take more space in Row or Column of a container by wrapping it in Container.
+	
+
+Flexible (
+	fit: FlexFit.loose    //it means that the size use by Rows/Cols in surrounding is to keep that same
+	
+		// OR
+
+	fit: FlexFit.tight    // fits the things according to shape.
+
+		
+
+	flex: 2			// It grew the container
+)
+
+
+
+Expanded  => fit: FlexFit.tight     // Replacement of fit => tight
+
+
+
+______________________________________________________________________________
+==============================================================================
+
+		PADDING => Widget	
+
+	Creates a widget that insets its child.
+	The [padding] argument must not be null.
+
+
+padding: EdgeInsets.all(10),
+
+
+
+______________________________________________________________________________
+==============================================================================
+
+		ListTile()       => Widget	
+		CircleAvatar()   => Widget
+
+
+ListTile(leading: CircleAvatar())
+
+leading
+
+title & subtitle      // are the features of ListTile widget
+
+trainling		// Element at the end of ListTile
+	
+
+	
+______________________________________________________________________________
+==============================================================================
+
+		
+
+
+
+______________________________________________________________________________
+==============================================================================
+
+
+
+
+
+______________________________________________________________________________
+==============================================================================
+
+
 
 
 
