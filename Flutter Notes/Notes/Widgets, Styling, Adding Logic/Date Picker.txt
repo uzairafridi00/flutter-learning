@@ -1,1 +1,63 @@
 		Date Picker
+
+	In Flutter for date picking we have a builtin function 
+
+showDatePicker()     => to which we pass multiple arguments i.e context, inititalDate etc
+
+	
+	// In this future is a class which is used to wait for the user to pick 
+	// the date
+
+.then()
+
+	// simply allow us a function which is executed once the user choose the date.
+
+	// then() will not stop our execution, our app will run smoothly
+	// and it will wait for user input and store in memory
+
+	// We can't make a value null 
+
+_________________________________________________________
+
+		// CODE
+
+ late DateTime _selectDate;
+ 
+
+void _presentDatePicker() {
+    showDatePicker(
+        context: context,
+        initialDate: DateTime.now(),
+        firstDate: DateTime(2022),
+        lastDate: DateTime.now());
+  }
+
+
+
+______________________________________________________________
+
+
+		// CODE with FUTURE
+
+
+DateTime _selectDate = DateTime.now();
+
+
+
+void _presentDatePicker() {
+    showDatePicker(
+            context: context,
+            initialDate: DateTime.now(),
+            firstDate: DateTime(2022),
+            lastDate: DateTime.now())
+        .then((pickedDate) {
+      if (pickedDate == null) {
+        return;
+      }
+      _selectDate = pickedDate;
+    });
+  }
+
+
+
+
