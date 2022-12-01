@@ -3,10 +3,15 @@ import 'package:intl/intl.dart';
 
 import '../models/transaction.dart';
 
+//typedef TxDeleteCallback = void Function(String id);
+
 class TransactionList extends StatelessWidget {
   List<Transaction> transactions = [];
 
-  TransactionList({super.key, required this.transactions});
+  final Function deleteTransaction;
+
+  TransactionList(
+      {super.key, required this.transactions, required this.deleteTransaction});
 
   @override
   Widget build(BuildContext context) {
@@ -54,6 +59,12 @@ class TransactionList extends StatelessWidget {
                     ),
                     subtitle: Text(
                         DateFormat.yMMMd().format(transactions[index].date)),
+                    trailing: IconButton(
+                      icon: Icon(Icons.delete),
+                      color: Theme.of(context).errorColor,
+                      onPressed: () =>
+                          deleteTransaction(transactions[index].id),
+                    ),
                   ),
                 );
               },
