@@ -1,0 +1,29 @@
+			Layout Builder Widget
+
+	Creates a widget that defers its building until layout
+	
+	Constraints in Layout Builder Widget define how much space certain may take
+	Constraints define how a widget rendered displayed on screen
+
+	Example => ListView have infinite height and in LayoutBuilder you can define it
+
+	You can set it or can use the flutter pre-define
+
+	
+
+
+return LayoutBuilder(
+      builder: (ctx, constraints) {
+
+	// height: constraints.maxHeight * 0.15      // Give height dynamically
+}
+
+	
+
+_______________________________________________________________________
+
+			
+
+
+
+
