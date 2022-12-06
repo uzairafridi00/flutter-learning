@@ -1,0 +1,60 @@
+			MediaQuery
+
+	Flutter at the back handles the size of different mobiles.
+	Here with MediaQuery we can dynamically assign the size to containers
+	according to the Screen.	
+
+
+MediaQuery.of(context).size.width  or height
+
+
+MediaQuery.of(context).size.height * 0.6       // 60% of device height	
+
+
+
+	
+
+	// Full Screen is equal to 100% 
+	// In order to give correct or dynamic height we have to subtract the heights
+	// of the appBar and StatusBar.
+
+	// Store the appBar widget in variable to get access of its height
+
+
+
+final appBar = // appBar Widget
+
+
+appBar.preferredSize.height               // for getting appBar
+
+
+MediaQuery.of(context).padding.top
+
+
+
+
+_______________________________________________________
+
+
+		// Can divide the screen in 100% or 1
+
+
+Container(
+                height: (MediaQuery.of(context).size.height -
+                        appBar.preferredSize.height -
+                        MediaQuery.of(context).padding.top) *
+                    0.4,
+                child: Chart(recentTransactions: _recentTransactions),
+              ),
+
+
+
+
+ 
+
+
+
+
+
+
+

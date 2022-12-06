@@ -1,0 +1,36 @@
+		Responsive
+
+	Portrait, LandScape, Tablet Desktop or PC
+
+_________________________________________________________
+
+		Adaptive
+
+	Android			IOS
+
+	Different look for Android and IOS
+
+	Android => Material-Desing Look/Style - Android Animations - Android Fonts
+	IOS =>  Cupertino Look/Style - IOS Animations - IOS Fonts
+
+_________________________________________________________
+
+
+		One Codebase / Project
+
+	One Widget Tree => other widgets are nested
+	
+	Different Leaves 
+
+if plateform.isIOS  => IOS Sub Tree
+
+if plateform.isIOS  => Android Sub Tree
+
+
+
+
+
+
+
+
+
