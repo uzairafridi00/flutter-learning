@@ -111,7 +111,20 @@ ___________________________________________________________________________
 
 
 
+			MANAGING THE MEDIA QUERY OBJECT
 
+
+	Store the MediaQuery object in one Variable then you can use it everywhere
+
+final mediaQuery = MediaQuery.of(context);
+
+
+	// Now use this object instead of repeating it everywhere
+
+
+
+
+__________________________________________________________________
 
 
 
