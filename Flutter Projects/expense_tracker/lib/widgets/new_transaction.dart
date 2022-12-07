@@ -47,47 +47,54 @@ class _NewTransactionState extends State<NewTransaction> {
 
   @override
   Widget build(BuildContext context) {
-    return Card(
-      elevation: 5,
-      child: Container(
-        child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
-          TextField(
-            autocorrect: true,
-            decoration: const InputDecoration(labelText: 'Title'),
-            controller: _titleController,
-            onSubmitted: (_) => _dataEntered(),
-          ),
-          TextField(
-            decoration: const InputDecoration(labelText: 'Amount'),
-            keyboardType: TextInputType.number,
-            // inputFormatters: <TextInputFormatter>[
-            //   FilteringTextInputFormatter.digitsOnly
-            // ], // Only numbers can be entered
-            controller: _amountController,
-            onSubmitted: (_) => _dataEntered(),
-          ),
-          Container(
-            height: 75,
-            child: Row(children: [
-              Expanded(
-                child: Text(_selectDate == null
-                    ? 'No Date Choosen!'
-                    : 'Picked Date: ${DateFormat().add_yMd().format(_selectDate as DateTime)}'),
-              ),
-              TextButton(
-                  onPressed: _presentDatePicker,
-                  child: Text(
-                    'Choose Date',
-                    style: TextStyle(fontWeight: FontWeight.bold),
-                  )),
-            ]),
-          ),
-          ElevatedButton(
-              onPressed: _dataEntered,
-              child: const Text(
-                'Add Transaction',
-              ))
-        ]),
+    return SingleChildScrollView(
+      child: Card(
+        elevation: 5,
+        child: Container(
+          padding: EdgeInsets.only(
+              top: 10,
+              left: 10,
+              right: 10,
+              bottom: MediaQuery.of(context).viewInsets.bottom + 10),
+          child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
+            TextField(
+              autocorrect: true,
+              decoration: const InputDecoration(labelText: 'Title'),
+              controller: _titleController,
+              onSubmitted: (_) => _dataEntered(),
+            ),
+            TextField(
+              decoration: const InputDecoration(labelText: 'Amount'),
+              keyboardType: TextInputType.number,
+              // inputFormatters: <TextInputFormatter>[
+              //   FilteringTextInputFormatter.digitsOnly
+              // ], // Only numbers can be entered
+              controller: _amountController,
+              onSubmitted: (_) => _dataEntered(),
+            ),
+            Container(
+              height: 75,
+              child: Row(children: [
+                Expanded(
+                  child: Text(_selectDate == null
+                      ? 'No Date Choosen!'
+                      : 'Picked Date: ${DateFormat().add_yMd().format(_selectDate as DateTime)}'),
+                ),
+                TextButton(
+                    onPressed: _presentDatePicker,
+                    child: Text(
+                      'Choose Date',
+                      style: TextStyle(fontWeight: FontWeight.bold),
+                    )),
+              ]),
+            ),
+            ElevatedButton(
+                onPressed: _dataEntered,
+                child: const Text(
+                  'Add Transaction',
+                ))
+          ]),
+        ),
       ),
     );
   }

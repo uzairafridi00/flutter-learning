@@ -23,6 +23,19 @@ return LayoutBuilder(
 _______________________________________________________________________
 
 			
+		
+				SingleChildScrollView 
+
+	Creates a box in which a single widget can be scrolled.
+
+
+
+_________________________________________________________________________
+
+
+
+				
+
 
 
 

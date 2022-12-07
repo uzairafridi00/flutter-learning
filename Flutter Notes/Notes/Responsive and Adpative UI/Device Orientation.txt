@@ -1,0 +1,80 @@
+		Main.dart => file
+
+void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  SystemChrome.setPreferredOrientations(
+      [DeviceOrientation.portraitUp, DeviceOrientation.portraitDown]);
+  runApp(MyApp());
+}
+
+
+
+	// With these lines of Code, we are enforcing the app to be in Landscape mode
+	// Otherwise you can write code for landscape mode
+
+
+_____________________________________________________________________
+
+
+			LANDSCAPE MODE
+
+		Switch Wadget
+
+	Creates a Material Design switch.
+
+	The switch itself does not maintain any state. 
+	Instead, when the state of the switch changes, 
+	the widget calls the [onChanged] callback. 
+	Most widgets that use a switch will listen for the 
+	[onChanged] callback and rebuild the switch with a new [value] 
+	to update the visual appearance of the switch.
+
+
+
+
+
+bool _showChart = false;
+
+
+Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+                Text('Show Chart'),
+                Switch(
+                    value: _showChart,
+                    onChanged: (val) {
+                      setState(() {
+                        _showChart = val;
+                      });
+                    })
+              ]),
+
+
+
+___________________________________________________________________
+
+
+
+			Showing Different Content Based on Device Orientation
+
+	In Main.dart -> file -> under Widget Builder 
+
+
+final isLandScape = MediaQuery.of(context).orientation == Orientation.landscape;
+
+
+
+if (isLandScape) Row(//show the Widget)
+	
+
+
+________________________________________________________________________
+
+
+
+			Device Sizes In Condition
+
+	
+
+
+
+
+
