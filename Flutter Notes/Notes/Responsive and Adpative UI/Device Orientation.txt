@@ -72,7 +72,46 @@ ________________________________________________________________________
 
 			Device Sizes In Condition
 
+	// You can also use the MediaQuery to give condition of different sizes
+	// With the help of ternary operator to display different UI buttons etc
 	
+
+MediaQuery.of(context).size.width > 360
+                      ? TextButton.icon(
+                          onPressed: () =>
+                              deleteTransaction(transactions[index].id),
+                          icon: Icon(Icons.delete),
+                          label: Text('Delete'),
+                          style: TextButton.styleFrom(
+                              foregroundColor: Theme.of(context).errorColor))
+                      : IconButton(
+                          icon: Icon(Icons.delete),
+                          color: Theme.of(context).errorColor,
+                          onPressed: () =>
+                              deleteTransaction(transactions[index].id),
+                        ),
+
+
+__________________________________________________________________________
+
+
+
+	TextButton.icon(
+                          onPressed: () =>
+                              deleteTransaction(transactions[index].id),
+                          icon: Icon(Icons.delete),
+                          label: Text('Delete'),
+                          style: TextButton.styleFrom(
+                              foregroundColor: Theme.of(context).errorColor))
+
+
+
+
+___________________________________________________________________________
+
+
+
+
 
 
 
