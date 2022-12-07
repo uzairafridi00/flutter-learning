@@ -1,0 +1,51 @@
+
+		Opening an IOS Emulator on MacOS
+
+open -a simulator
+
+
+
+	We will write the same code for different devices and plateforms
+	Like in IOS we have some changed UI as compare to Android 
+
+	For Switch it is easy to use Adaptive method to easly change the look and feel.
+
+
+
+Switch.adaptive
+
+
+
+
+	// However for other components and Widgets you need to use Cupertino Styling
+
+
+________________________________________________________________________
+========================================================================
+
+
+
+			Identify the Plateform
+
+
+import 'dart:io';
+
+
+	// Place all the Dart imports on top
+	// Packages on 2nd 
+	// And your files on 3rd
+
+
+
+Platform.isIOS or isAndroid or isWindows or isLinux or isMacOS
+
+
+	// You can check all the plateforms and apply the logic of UI according
+	// to it
+
+
+
+
+
+
+	
