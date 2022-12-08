@@ -73,7 +73,7 @@ class _NewTransactionState extends State<NewTransaction> {
               keyboardType: TextInputType.number,
               // inputFormatters: <TextInputFormatter>[
               //   FilteringTextInputFormatter.digitsOnly
-              // ], // Only numbers can be entered
+              // ], // Only numbers can be entered 
               controller: _amountController,
               onSubmitted: (_) => _dataEntered(),
             ),
