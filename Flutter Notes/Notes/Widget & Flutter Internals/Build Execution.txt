@@ -1,0 +1,13 @@
+		How Flutter executes build(){...} method
+
+
+	The build(){...} method is called by Flutter whenever the state changes. 
+	There are basically two important triggers that can lead to a rebuild.
+
+1) One is when the setState(){...} method is called in a stateful widget.  
+   Calling setState(){...} automatically leads to build(){...} method call.
+
+
+2) Secondly, whenever there is a MediaQuery call or Theme.of(...)... call, 
+   the soft keyboard appears/disappears, etc. whenever the data of these changes 
+   it automatically triggers the build(){...} method.

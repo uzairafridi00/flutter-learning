@@ -1,0 +1,44 @@
+
+1. When 'build' runs the flutter re-draws the screen or rebuild all the pixels
+
+	That sounds that it slows the performance but flutter don't re-draw screen 
+	
+
+2. Flutter aims to give 60 FPS of Screen.
+ 
+3. If nothing changes. Flutter give you back the same UI that is stores in memory.
+
+4. 'Build' is called by Flutter whenever state changes. 
+
+5. Everything in Flutter is a Widget. But at the End of a Day, Every Widget is made
+   of class and you can instantiate like a class which takes different arguments.
+   You can make their objects. When 'Build' runs again then new Intances of every
+   Widget created on Screen with 60 FPS.
+
+6. Every Widget is immutable. You can't make changes to its properties.
+   But you can extend the Widgets to make your Own Widget with some custom
+   Configuration.
+
+7. Querying the current media using [MediaQuery.of] will cause your widget 
+   to rebuild automatically whenever the [MediaQueryData] changes 
+   (e.g., if the user rotates their device).
+
+_______________________________________________________________________________
+===============================================================================
+
+
+		WIDGET TREE & ELEMENT TREE & RENDER TREE
+
+	Widget tree is the code tree and logic you applied.
+	while Element and Render is control internally by Flutter and give
+	support to Widget Tree in rendering and building on Screen.
+
+
+Note: More exlaination is in picture.	
+
+_______________________________________________________________________________
+===============================================================================
+
+
+
+

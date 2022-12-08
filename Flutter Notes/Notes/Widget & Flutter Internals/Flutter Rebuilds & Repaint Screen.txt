@@ -1,0 +1,35 @@
+				Behind the scenes
+
+Flutter does not redraw/recreate the entire UI on every build(){...} method call. 
+We will discuss this in detail further.
+
+Flutter aims to give you a 60 FPS (Frames Per Second) application. 
+So, it updates the screen 60 times per second. 
+It means that the screen is repainted by Flutter 60 times per second. 
+This however is not bad because all apps and games run at 60 FPS or more by default.
+
+This would only become inefficient if Flutter would have to recalculate the entire layout 60 times per second!
+
+If Flutter draws something onto the screen for the first time it needs 
+to figure out the position, color, text, etc. of every element on the screen.
+In short, during the first render, only the flutter needs to configure every single pixel on the screen.
+
+
+For subsequent repaints/draws, i.e, for refreshes of the UI if nothing changed 
+then Flutter takes the old information that it has already derived previously and 
+paints that on the screen which is super duper fast and very efficient.
+
+Hence, the refresh rate is not the problem, it would only be a problem 
+if Flutter had to calculate everything on the screen with every refresh.
+This is what we will discuss in detail here that if Flutter recalculates 
+everything whenever a build(){...} method is called.
+
+
+_________________________________________________________________________________________________________
+=========================================================================================================
+
+
+	https://tealfeed.com/flutter-basics-flutter-renders-contents-screen-a8544
+
+NOTE: For more detailed information Read this Article.
+
