@@ -1,0 +1,61 @@
+		Adaptive Custom Widgets
+
+
+	// You can make your own Custom adaptive Widgets which will work
+	// on both IOS and Android to avoid the duplication of the button
+	// everywhere. This becomes helpful when you want to use one button
+	// in more than one place.
+
+
+
+1. Make a folder 'adaptive_widgets'
+2. Name your Widget 'adaptive_flat_button'
+3. Make UI for both IOS and Android with Platform.IOS logic using ternary operator.
+4. Now take values of onPressed and Text on button dynamically using Constructor calls.
+5. That's it -> You can use this only one button in other places just by passing the
+   Text and Function to it.
+
+
+NOTE: You need to import the Material, Cupertino and Dart.io packages before using 
+      or applying the logic so that everything runs smoothly.
+______________________________________________________________________
+
+
+
+	For most Widgets you can't apply this logic
+
+
+________________________________________________________________________
+
+
+
+import 'dart:io';
+import 'package:flutter/material.dart';
+import 'package:flutter/cupertino.dart';
+
+class AdaptiveFlatButton extends StatelessWidget {
+
+  final String text;
+  final VoidCallback handler;
+
+  const AdaptiveFlatButton({super.key, required this.text, required this.handler});
+
+  @override
+  Widget build(BuildContext context) {
+    return Platform.isIOS
+        ? CupertinoButton(
+            onPressed: handler,
+            child: Text(
+              text,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ))
+        : TextButton(
+            onPressed: handler,
+            child: Text(
+              text,
+              style: TextStyle(fontWeight: FontWeight.bold),
+            ));
+  }
+}
+
+	
