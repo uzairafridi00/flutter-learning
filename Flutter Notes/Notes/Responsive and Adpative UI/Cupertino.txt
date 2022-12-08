@@ -1,0 +1,74 @@
+		Cupertino Widgetss
+
+
+	IOS Style Widgets
+
+import 'package:flutter/cupertino.dart';
+
+
+	Place your Logic of Scaffoled in a variable then 
+	use Cupertino Widget so that you can easily call them in
+	CupertinoPageScaffoled() and Scaffold
+
+
+
+	Using Dart io package we can easily get the OS of the app running on 
+	device
+
+
+
+Platform.isIOS ? CupertinoNavigationBar (....) : AppBar(....);
+
+
+Platform.isIOS ? IOSWidget(....) : MaterialWidget(....)
+
+
+
+	For dynamically changing the UI between IOS and Android
+	We use Platform package to easily implement our logic
+
+	Moreover you can explore another Widgets from Flutter Widget Catalogue
+	
+	
+__________________________________________________________________
+==================================================================
+
+
+SafeArea  => Widget
+
+
+	It Ensures the Safe Area the widget
+	Everything is positioned within boundary or move down a little bit and up
+	
+
+
+
+__________________________________________________________________
+==================================================================
+
+
+			Theme in IOS
+
+	Theming in Flutter for IOS is not advanced - Not having alot properties
+	
+	You can explicitly set the Sizes and Colors using Theme.of(context)
+
+
+__________________________________________________________________
+==================================================================
+
+
+			Cupertino Buttons
+
+	CupertinoTextField
+
+
+Platform.isIOS ? CupertinoButton(....) : FlatButton(....)
+
+
+
+____________________________________________________________________
+====================================================================
+
+
+		
