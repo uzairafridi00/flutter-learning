@@ -1,0 +1,29 @@
+			Const Widget and Constructors
+
+Every stateless widget is Const because no value changes
+and they are immutable.
+
+
+	// Why would have const with Widget?
+	// You can escape unnecessary widget rebuilds if you mark a widget 
+	// const in Widget Tree
+
+
+	// This will increase the performance of your app
+
+	// We add the 'const' keyword with those widgets which don't change
+	// during runtime.
+
+	// You can't assign the 'const' to dynamic widget
+
+	
+
+
+The object is immutable but new objects (with different data/config) are 
+created between rebuilds.
+
+
+
+
+
+

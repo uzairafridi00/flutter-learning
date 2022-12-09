@@ -111,6 +111,35 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  List<Widget> _buildLandscapeContent(
+      MediaQueryData mediaQuery, AppBar appBar, Widget txListWidget) {
+    return [
+      Container(
+        height: (mediaQuery.size.height -
+                appBar.preferredSize.height -
+                mediaQuery.padding.top) *
+            0.3,
+        child: Chart(recentTransactions: _recentTransactions),
+      ),
+      txListWidget
+    ];
+  }
+
+  List<Widget> _buildPortraitContent(
+      MediaQueryData mediaQuery, AppBar appBar, Widget txListWidget) {
+    return [
+      _showChart
+          ? Container(
+              height: (mediaQuery.size.height -
+                      appBar.preferredSize.height -
+                      mediaQuery.padding.top) *
+                  0.6,
+              child: Chart(recentTransactions: _recentTransactions),
+            )
+          : txListWidget
+    ];
+  }
+
   @override
   Widget build(BuildContext context) {
     final mediaQuery = MediaQuery.of(context);
@@ -171,24 +200,9 @@ class _MyHomePageState extends State<MyHomePage> {
                     })
               ]),
             if (!isLandScape)
-              Container(
-                height: (mediaQuery.size.height -
-                        appBar.preferredSize.height -
-                        mediaQuery.padding.top) *
-                    0.3,
-                child: Chart(recentTransactions: _recentTransactions),
-              ),
-            if (!isLandScape) txListWidget,
+              ..._buildLandscapeContent(mediaQuery, appBar, txListWidget),
             if (isLandScape)
-              _showChart
-                  ? Container(
-                      height: (mediaQuery.size.height -
-                              appBar.preferredSize.height -
-                              mediaQuery.padding.top) *
-                          0.6,
-                      child: Chart(recentTransactions: _recentTransactions),
-                    )
-                  : txListWidget
+              ..._buildPortraitContent(mediaQuery, appBar, txListWidget),
           ]),
     );
 

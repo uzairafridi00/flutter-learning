@@ -40,5 +40,73 @@ _______________________________________________________________________________
 ===============================================================================
 
 
+		Extracting Widgets
+
+	// You can extract all the widgets which use MediaQuery and put it in
+	// one file. Because whenever MediaQuery changes the build function is
+	// called automatically.
+
+
+	// Select the Widget part which you want in seperate file
+	// Using Refactoring tool -> Extract the Widget
+
+	// It doesn't give performance but make Code Readable.
+
+
+_______________________________________________________________________________
+===============================================================================
+
+
+			BUILD METHODS
+
+
+Widget _buildLandscapeContent() {...}
+
+Widget _buildPortraitContent() {...}
+
+
+List<Widget> _buildLandscapeContent() {return[..]}    // For Returning multiple widgets
+
+
+if (!isLandScape)
+              ..._buildLandscapeContent(mediaQuery, appBar, txListWidget)
+
+
+
+	// When you will the List<Widget> build Method then it is also a List
+	// and an error will come forward which is you can't use a List<Widget>
+	// inside another List<Widget>. So here we will use Spread operator.
+	// Which will divide each single item and place in another List<Widget>
+ 
+
+
+
+List<Widget> _buildLandscapeContent(
+      
+	MediaQueryData mediaQuery, AppBar appBar, Widget txListWidget) {
+    
+	return [....] 
+
+	}
+
+
+_________________________________________________________________________
+=========================================================================
+
+
+			WIDGET LifeCycle
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
