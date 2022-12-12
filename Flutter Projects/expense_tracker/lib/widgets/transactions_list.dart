@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -5,7 +7,7 @@ import '../models/transaction.dart';
 
 //typedef TxDeleteCallback = void Function(String id);
 
-class TransactionList extends StatelessWidget {
+class TransactionList extends StatefulWidget {
   List<Transaction> transactions = [];
 
   final Function deleteTransaction;
@@ -14,8 +16,27 @@ class TransactionList extends StatelessWidget {
       {super.key, required this.transactions, required this.deleteTransaction});
 
   @override
+  State<TransactionList> createState() => _TransactionListState();
+}
+
+class _TransactionListState extends State<TransactionList> {
+
+  Color? _bgColor;
+  @override
+  void initState() {
+    const availableColors = [
+      Colors.red,
+      Colors.blue,
+      Colors.black,
+      Colors.amberAccent,
+    ];
+    _bgColor = availableColors[Random().nextInt(4)];
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
-    return transactions.isEmpty
+    return widget.transactions.isEmpty
         ? LayoutBuilder(builder: (ctx, constraints) {
             return Column(
               children: [
@@ -45,23 +66,24 @@ class TransactionList extends StatelessWidget {
                 margin: EdgeInsets.symmetric(vertical: 8, horizontal: 10),
                 child: ListTile(
                   leading: CircleAvatar(
+                    backgroundColor: _bgColor,
                     radius: 30,
                     child: Padding(
                       padding: const EdgeInsets.all(6.0),
                       child: FittedBox(
-                          child: Text('\$${transactions[index].amount}')),
+                          child: Text('\$${widget.transactions[index].amount}')),
                     ),
                   ),
                   title: Text(
-                    transactions[index].title,
+                    widget.transactions[index].title,
                     style: Theme.of(context).textTheme.bodyText1,
                   ),
                   subtitle:
-                      Text(DateFormat.yMMMd().format(transactions[index].date)),
+                      Text(DateFormat.yMMMd().format(widget.transactions[index].date)),
                   trailing: MediaQuery.of(context).size.width > 360
                       ? TextButton.icon(
                           onPressed: () =>
-                              deleteTransaction(transactions[index].id),
+                              widget.deleteTransaction(widget.transactions[index].id),
                           icon: Icon(Icons.delete),
                           label: Text('Delete'),
                           style: TextButton.styleFrom(
@@ -70,12 +92,12 @@ class TransactionList extends StatelessWidget {
                           icon: Icon(Icons.delete),
                           color: Theme.of(context).errorColor,
                           onPressed: () =>
-                              deleteTransaction(transactions[index].id),
+                              widget.deleteTransaction(widget.transactions[index].id),
                         ),
                 ),
               );
             },
-            itemCount: transactions.length,
+            itemCount: widget.transactions.length,
           );
   }
 }
