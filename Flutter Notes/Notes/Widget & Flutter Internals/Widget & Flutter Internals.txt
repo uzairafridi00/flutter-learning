@@ -93,15 +93,103 @@ List<Widget> _buildLandscapeContent(
 _________________________________________________________________________
 =========================================================================
 
+			App LifeCycle
 
-			WIDGET LifeCycle
+	// In Main.dart file -> there is a mixin and add some features to your class
+	// If you want to bring features from multiple classes.
+	// You would use a 'Mixin'.
+
+	// We use it by adding 'with' keyword.
+
+
+class MyHome extends State<MyHome> {...}            // Normal Class
+
+
+class MyHome extends State<MyHome> with .... {...}      // Class with Mixin
+
+
+class MyHome extends State<MyHome> with WidgetsBindingObserver{...}    // Normal Class
 
 
 
 
+	// After adding this you can now add methods inside this class
 
 
 
+@override
+void initState() {
+
+	WidgetsBinding.instance.addObserver(this);
+	super.initState();
+}
+
+
+@override
+void didChangeAppLifeCycleState(AppLifeCycleState state) {....}
+
+
+@override
+dispose() {
+	WidgetsBinding.instance.removeObserver(this);
+	super.dispose();
+}
+
+
+
+	
+	// Write this code if you want to control the App Life Cycle like:
+	// paused, inactive, resumed, suspended
+
+	
+
+_________________________________________________________________________
+=========================================================================
+
+
+
+			BUILD CONTEXT
+
+
+	// The context build the Skeleton of your widget tree.
+	// They know about your Widget tree, where to place a widget and to where the widget
+	// belongs to.
+
+	// Context gives you direct communication. 
+
+
+
+_________________________________________________________________________
+=========================================================================
+
+
+			Dynamically Changing the Color
+
+
+ Color? _bgColor;
+  @override
+  void initState() {
+    const availableColors = [
+      Colors.red,
+      Colors.blue,
+      Colors.black,
+      Colors.amberAccent,
+    ];
+    _bgColor = availableColors[Random().nextInt(4)];
+    super.initState();
+  }
+
+
+
+_________________________________________________________
+
+
+
+			KEY
+
+	// This is used with every other Widget. But not with Stateless Widget.
+	
+	
 
 
 
