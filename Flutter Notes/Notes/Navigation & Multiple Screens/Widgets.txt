@@ -1,0 +1,12 @@
+		ListView & GridView
+
+	ListView -> Top to bottom list
+	GridView -> Side by Side Widget list
+
+
+GridView().builder    // has the builder function which helps in dynamic listing
+		     // when you don't know about the List in advance
+
+
+
+GridView()  	   // When you know the fix lenght of Listing.

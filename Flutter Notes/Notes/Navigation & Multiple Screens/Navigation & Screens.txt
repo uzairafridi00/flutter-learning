@@ -1,0 +1,13 @@
+		Screen or Widget or Page or Route   => Same thing
+	
+	// but typically any Widget which uses Scaffold is called a Screen Widget.
+	// Scaffoled makes our screen.
+
+
+	// Its not hard and fast rule to name your app using screen keyword.
+	// but it will helpful in identifying the screens easily.
+
+
+categories_screen.dart   // => Good Approach
+
+
