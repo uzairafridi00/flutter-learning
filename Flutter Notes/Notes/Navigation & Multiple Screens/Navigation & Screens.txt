@@ -11,3 +11,33 @@
 categories_screen.dart   // => Good Approach
 
 
+__________________________________________________________________________
+==========================================================================
+
+			Registring a Screen as the Main Screen
+
+	// Register your Widget to -> home: MyWidget()
+	// Now your MyWidget() screen or widget should have Scaffoled with it
+	// because without Scaffoled you can't make a Screen.
+
+
+Scaffoled(
+
+appBar: appBar(title: Text('MyApp'))
+body: YourWidgetCode....
+
+)
+
+
+	// Now your Screen is prepared to display as a Main Screen
+
+
+
+__________________________________________________________________________
+==========================================================================
+
+			NAVIGATION to A NEW SCREEN
+
+	// 
+
+
