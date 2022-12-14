@@ -10,3 +10,25 @@ GridView().builder    // has the builder function which helps in dynamic listing
 
 
 GridView()  	   // When you know the fix lenght of Listing.
+
+
+_____________________________________________________
+=====================================================
+
+
+
+GestureDetector()     // Creates a widget that detects gestures.
+
+InkWell()           // Creates an ink well widget with Splash animation on screen
+
+
+	// The above two widgets take onTap and other screen tapping properties
+	// We can use them to get the gestures detection of user on screen
+
+_____________________________________________________
+=====================================================
+
+
+
+
+

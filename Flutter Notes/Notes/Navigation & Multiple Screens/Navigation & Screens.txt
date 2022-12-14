@@ -38,6 +38,45 @@ __________________________________________________________________________
 
 			NAVIGATION to A NEW SCREEN
 
-	// 
+
+Navigator.of(context)       // This is a flutter class which takes the context argument
+			    // with push and pop values
+
+	
+	// When we Navigate between pages we manage the pages as Stack of Pages
+	// Pages are managed as Stack
+
+	// We remove and add pages on Stack.
+	// push and pop the page on Stack and Top-most page is visible
 
 
+	// Final Code
+
+
+
+	// Here we used "_" 
+	// because when we don't need the context we just passed this
+
+
+
+void selectCategory(BuildContext ctx) {
+    Navigator.of(ctx).push(MaterialPageRoute(builder: (_) {
+      return CategoriesMealsScreen();
+    },),);
+  }
+
+
+		// When passing to the Widget		
+
+onTap: () => selectCategory(context)
+
+
+
+__________________________________________________________________________
+==========================================================================
+
+
+
+
+	
+	
