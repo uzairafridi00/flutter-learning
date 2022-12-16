@@ -1,0 +1,73 @@
+	// The bigger your app is the more it is difficult to handle
+	// manual transition or routes between screens.
+	
+	// It's also hard to navigate which page or which route the screen support
+	
+
+	// In the main.dart file you can pass the property of routes:
+
+	// takes a map which contain key and after that the creation function
+	// for screen
+
+routes: {
+	'/categories': (ctx) => MyCategoryScreen(),
+}
+
+
+
+	// The problem is that MyCategoryScreen() will want some data in order to pass
+	// it, So we expect the parameters to be passed to Constructors
+
+
+	// Flutter has another mechanism system to pass data between screens.
+
+	// In MyCategoryScreen() => remove your constructor 
+	// now in Navigator we now will use 'pushNamed'
+	// which does not take a Material page route but it takes the path
+	// with 'arguments'
+
+Navigator.of(ctx)
+        .pushNamed('/category-meals', arguments: {'id': id, 'title': title}); 
+
+
+
+
+	// In categories file you can accept the data from outside
+	// using ModalRoute
+	
+
+final routeArgs = ModalRoute.of(context)?.settings.arguments as Map<String, String>;
+final categoryTitle = routeArgs['title'];
+final categoryId = routeArgs['id'];	
+
+
+
+	
+	// It will be very useful in bigger to know which routes your app support
+
+__________________________________________________________________________
+==========================================================================
+
+
+	'/'  => it identifies the main or home screen
+
+
+initialRoute: '/'	
+	
+
+	
+	// In your Category screen page -> define a static route
+
+
+static const routeName = '/category-meals';
+
+
+	// Now without hard-coded you can easily access the route
+
+
+CategoriesMealsScreen.routeName
+
+
+
+
+	
