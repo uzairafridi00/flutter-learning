@@ -1,0 +1,80 @@
+		Enum
+
+	// An enumeration is used for defining named constant values. 
+	// An enumerated type is declared using the enum keyword.
+
+
+enum enum_name {  
+   enumeration list 
+}
+
+
+	// OR
+
+
+enum Status { 
+   none, 
+   running, 
+   stopped, 
+   paused 
+}
+
+
+	// It automatically gives indexing values to enum List 
+
+	
+	// Enums, or enumerated types, are a data type consisting of a set of named values 
+	// called elements, members, numerals, or enumerators of the type. 
+	// In essence, an enum allows a programmer to use a custom type with a 
+	// restricted set of values instead of using an integer to represent a set of values.
+
+
+_______________________________________________________________________________
+===============================================================================
+
+
+			Models
+
+
+	// Model in flutter refers to data flow and it corresponds to the 
+	// MVC or model view controller architecture. Although there is no hard and fast rule, 
+	// but if data flow comes from the models it always works fine. Otherwise, 
+	// managing data becomes a tedious job.
+
+	
+	// EXAMPLE
+
+
+class Book {
+  final String id;
+  final String title;
+  final String description;
+  final double price;
+  final String imageUrl;
+  bool isFavorite;
+
+  Book({
+    required this.id,
+    required this.title,
+    required this.description,
+    required this.price,
+    required this.imageUrl,
+    this.isFavorite = false,
+  });  
+}
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
