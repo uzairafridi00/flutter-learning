@@ -68,6 +68,14 @@ static const routeName = '/category-meals';
 CategoriesMealsScreen.routeName
 
 
+____________________________________________________________
+============================================================
+
+
+			onGenerateRoute & onUnknownRoute
+
+	// When you use pushNamed you need to register the route on main.dart file
+	// but when you use push you create route on fly (on that page)
 
 
 	

@@ -29,6 +29,19 @@ _____________________________________________________
 =====================================================
 
 
+Stack -> Creates a stack layout widget.
+	// By default, the non-positioned children of the stack 
+	// are aligned by their top left corners.
+
+
+Positioned -> can be only use inside Stack 
+	   // Creates a widget that controls where a child of a [Stack] is positioned.
+
+
+
+
+
+
 
 
 
