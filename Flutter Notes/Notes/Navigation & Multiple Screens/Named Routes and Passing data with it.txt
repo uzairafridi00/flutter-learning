@@ -78,4 +78,27 @@ ____________________________________________________________
 	// but when you use push you create route on fly (on that page)
 
 
+onGenerateRoute:
+
+	// The route generator callback used when the app is navigated to a named route.
+	// This is used if [routes] does not contain the requested route.
+
+
+
+onUnknownRoute:
+
+	// Called when [onGenerateRoute] fails to generate a route, except for the [initialRoute].
+	// This callback is typically used for error handling. For example, this callback might 
+	// always generate a "not found" page that describes the route that wasn't found.
+
+
+__________________________________________________________________________
+==========================================================================
+
+
+
+
+
+
+
 	
