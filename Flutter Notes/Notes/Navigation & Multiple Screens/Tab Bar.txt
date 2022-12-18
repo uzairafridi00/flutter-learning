@@ -32,3 +32,34 @@ NOTE:
 	Now you can go to Main.dart file and call your TabsScreen() page
 
 	More you can check the code
+
+
+______________________________________________________________
+==============================================================
+
+
+
+		BOTTOM TAB BAR
+
+
+BottomNavigationBar 
+	// Creates a bottom navigation bar which is typically used as a 
+	// [Scaffold]'s [Scaffold.bottomNavigationBar] argument.
+
+
+
+List<BottomNavigationBarItem>
+item:
+	// Defines the appearance of the button items that are 
+	// arrayed within the bottom navigation bar.
+
+
+BottomNavigationBarItem(
+              backgroundColor: Theme.of(context).colorScheme.primary,
+              icon: Icon(Icons.category),
+              label: 'Categories'),
+
+
+
+__________________________________________________________________
+==================================================================

@@ -19,17 +19,17 @@ class _TabsScreenState extends State<TabsScreen> {
           appBar: AppBar(
             title: const Text('Meals'),
             bottom: TabBar(
-              indicatorColor: Theme.of(context).colorScheme.primary,
-              tabs: [
-              Tab(
-                icon: Icon(Icons.category),
-                text: ('Category'),
-              ),
-              Tab(
-                icon: Icon(Icons.star),
-                text: ('Favorites'),
-              ),
-            ]),
+                indicatorColor: Theme.of(context).colorScheme.primary,
+                tabs: const [
+                  Tab(
+                    icon: Icon(Icons.category),
+                    text: ('Category'),
+                  ),
+                  Tab(
+                    icon: Icon(Icons.star),
+                    text: ('Favorites'),
+                  ),
+                ]),
           ),
           body: TabBarView(children: [
             CategoriesScreen(),
