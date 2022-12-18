@@ -1,0 +1,34 @@
+
+		// Tab Bar
+
+
+DefaultTabController 
+	// Creates a default tab controller for the given [child] widget.
+
+
+TabBar 
+	// Creates a Material Design tab bar.
+
+
+Tab
+	// Creates a Material Design [TabBar] tab.
+
+
+TabBarView
+	// Creates a page view with one child per tab.
+
+
+______________________________________________________________
+==============================================================
+
+
+NOTE:
+	The tabs we define in TabBar will be inside Tab widget
+	Now in TabBarView you will have to call your Screens according to numbering
+	you define in TabBar
+
+	Flutter will automatically do all the background work.
+
+	Now you can go to Main.dart file and call your TabsScreen() page
+
+	More you can check the code
