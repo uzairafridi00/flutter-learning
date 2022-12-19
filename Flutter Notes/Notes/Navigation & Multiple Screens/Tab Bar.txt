@@ -63,3 +63,23 @@ BottomNavigationBarItem(
 
 __________________________________________________________________
 ==================================================================
+
+
+
+		CUSTOM DRAWER
+
+
+Drawer()
+
+	// A panel displayed to the side of the [body], often hidden on mobile devices. 
+	// Swipes in from either left-to-right ([TextDirection.ltr]) or right-to-left ([TextDirection.rtl])
+
+
+
+
+
+
+
+
+
+
