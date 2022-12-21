@@ -76,7 +76,57 @@ __________________________________________________________________________
 ==========================================================================
 
 		
+		Replacing PAGE instead of PUSHING
+
+Navigator.of(context).pushReplacementNamed('/');
+
+pushReplacementNamed
+
+	OR
+	
+pushReplacement
+
+	// Replace the current route of the navigator by pushing the 
+	// route named [routeName] and then disposing the 
+	// previous route once the new route has finished animating in.
 
 
+	// Flutter recognized it and don't give back navigation to go back
+	// It also saves memory because it will not put the pages on Stack of each other
+	// but delete the previous one and bring new page.
+
+	// Sometimes we don't want the user to go back but instead we replace the existing page
+	// User Auth -> when you hit login so we don't want the user to go back to Login Page
+	// we redirect the user to Main page
+
+	// It will avoid the infinite amount of pages on Stack which will cause memory overflow
+
+
+
+__________________________________________________________________________
+==========================================================================
+
+		POPPING PAGES & PASSING DATA BACK
+
+Navigator.of(context).pop()    // -> removes the screen which are on top of Stack
+	
+	//  
+
+
+__________________________________________________________________________
+==========================================================================
+
+
+
+
+
+__________________________________________________________________________
+==========================================================================
+
+
+
+
+__________________________________________________________________________
+==========================================================================
 	
 	

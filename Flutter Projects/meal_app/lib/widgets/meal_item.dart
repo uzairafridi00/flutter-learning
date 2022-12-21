@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 import '../screens/meal_detail_screen.dart';
 import '../models/meal.dart';
 
+// Step 1: Define a Callback.
+typedef ObjectCallback = void Function(String obj);
+
 class MealItem extends StatelessWidget {
   final String id;
   final String title;
@@ -10,6 +13,7 @@ class MealItem extends StatelessWidget {
   final int duration;
   final Complexity complexity;
   final Affordability affordability;
+  final ObjectCallback removeItem;
 
   const MealItem(
       {super.key,
@@ -18,7 +22,8 @@ class MealItem extends StatelessWidget {
       required this.imageUrl,
       required this.duration,
       required this.complexity,
-      required this.affordability});
+      required this.affordability,
+      required this.removeItem});
 
   String get complexityText {
     switch (complexity) {
@@ -53,10 +58,14 @@ class MealItem extends StatelessWidget {
   }
 
   void selectMeal(BuildContext ctx) {
-    Navigator.of(ctx).pushNamed(
-      MealDetailScreen.routeName,
-      arguments: id,
-    );
+    Navigator.of(ctx)
+        .pushNamed(
+          MealDetailScreen.routeName,
+          arguments: id,
+        )
+        .then((result) => {
+              if (result != null) {removeItem(result)}
+            });
   }
 
   @override
