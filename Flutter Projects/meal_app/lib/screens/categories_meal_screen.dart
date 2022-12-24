@@ -13,8 +13,8 @@ class CategoriesMealsScreen extends StatefulWidget {
 }
 
 class _CategoriesMealsScreenState extends State<CategoriesMealsScreen> {
-  late String categoryTitle;
-  late List<Meal> displayedMeals;
+  String categoryTitle = 'abx';
+  List<Meal> displayedMeals = [];
 
   @override
   void didChangeDependencies() {
@@ -23,7 +23,7 @@ class _CategoriesMealsScreenState extends State<CategoriesMealsScreen> {
     final categoryTitle = routeArgs['title'];
     final categoryId = routeArgs['id'];
 
-    displayedMeals = DUMMY_MEALS.where((meal) {
+    final List<Meal> displayedMeals = DUMMY_MEALS.where((meal) {
       return meal.categories.contains(categoryId);
     }).toList();
     super.didChangeDependencies();
@@ -40,7 +40,7 @@ class _CategoriesMealsScreenState extends State<CategoriesMealsScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(categoryTitle!),
+        title: Text(categoryTitle),
       ),
       body: ListView.builder(
         itemBuilder: (ctx, index) {
