@@ -4,7 +4,7 @@ import '../screens/meal_detail_screen.dart';
 import '../models/meal.dart';
 
 // Step 1: Define a Callback.
-typedef ObjectCallback = void Function(String obj);
+typedef ObjectCallback = void Function(String id);
 
 class MealItem extends StatelessWidget {
   final String id;
@@ -64,8 +64,7 @@ class MealItem extends StatelessWidget {
           arguments: id,
         )
         .then((result) => {
-              // if (result != null) {removeItem(result)}
-              print(result)
+              if (result != null) {removeItem(result.toString())}
             });
   }
 
