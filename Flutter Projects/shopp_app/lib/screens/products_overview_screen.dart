@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:shopp_app/widgets/products_item.dart';
 
 import '../models/product.dart';
 
@@ -53,7 +54,11 @@ class ProductsOverviewScreen extends StatelessWidget {
       body: GridView.builder(
         padding: const EdgeInsets.all(10.0),
         itemCount: loadedProducts.length,
-        itemBuilder: (ctx, index) => Container(),
+        itemBuilder: (ctx, index) => ProductsItem(
+          id: loadedProducts[index].id,
+          title: loadedProducts[index].title,
+          imageUrl: loadedProducts[index].imageUrl,
+        ),
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2,
           childAspectRatio: 3 / 2,
