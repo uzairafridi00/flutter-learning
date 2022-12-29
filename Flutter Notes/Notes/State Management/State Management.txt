@@ -12,4 +12,16 @@
 flutter pub add provider
 
 
-	// After installing 
+	// After installing it. Make a provider class with get Methods using 'Mixin' ChangeNotifier
+	// and all the data that it accessed.
+
+	// Now you can get the access of data with
+
+
+ final productsData = Provider.of<Products>(context);
+ final products = productsData.items;
+
+
+
+____________________________________________________________________________
+============================================================================
