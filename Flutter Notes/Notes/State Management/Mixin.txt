@@ -1,0 +1,9 @@
+
+		Inheritance (extends)   vs  Mixins (with)
+
+	// You can add multiple mixins with a class but not extends more than one class
+	
+	// Inheritance have a strong relationship with classes
+	// While Mixins have utility classes
+
+	
