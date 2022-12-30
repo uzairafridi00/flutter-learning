@@ -27,4 +27,16 @@ ____________________________________________________________________________
 ============================================================================
 
 
+	ChangeNotifierProvider  => Entry	=> Wrap the main.dart file on this
+	Provider.of()		=> Interaction	=> It gives you interaction of using Functions
+	Consumer		=> User		=> It shows the current value
+	ChangeNotifier		=> Data Holder	=> It extends our provider class
+
+
+____________________________________________________________________________
+============================================================================
+
+
+
+
 	
