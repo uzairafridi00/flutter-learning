@@ -1,3 +1,9 @@
 		LOCAL vs APP-WIDE State
 
+	// We can implement local and app-wide state changing logic
+	
+	// Local -> use Stateful widget to only direct or change the local state
+	// 	    not affecting the overall app state.
+
+
 	// 
