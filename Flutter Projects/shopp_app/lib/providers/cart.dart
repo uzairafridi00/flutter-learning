@@ -33,7 +33,7 @@ class Cart with ChangeNotifier {
               ));
     } else {
       _items!.putIfAbsent(
-          productId,
+          productId,  
           () => CartItem(
                 id: DateTime.now().toString(),
                 title: title,

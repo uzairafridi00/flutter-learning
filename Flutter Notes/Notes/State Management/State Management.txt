@@ -57,10 +57,41 @@ _______________________________________________________________________
 =======================================================================
 
 
+		MULTIPLE PROVIDERS
+
+
+	MultiProvider => is a widget to allow us to use multiple providers at a same time
+
+
+MultiProvider(
+	providers: [
+		ChangeNotifierProvider.value(
+			value: ProviderOne(),
+		),
+		ChangeNotifierProvider.value(
+			value: ProviderTwo(),
+		)
+
+		
+		// Below is the recommended way to use Providers
+
+		ChangeNotifierProvider(
+			create: (ctx) => ProviderOne(),
+		),
+		ChangeNotifierProvider(
+			create: (ctx) => ProviderTwo(),
+		),
+	]
+
+
+child: MaterialApp(//...)
+
+)
 	
 
 
-
+_______________________________________________________________________
+=======================================================================
 
 
 	
