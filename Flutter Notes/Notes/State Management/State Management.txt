@@ -36,6 +36,30 @@ ____________________________________________________________________________
 ____________________________________________________________________________
 ============================================================================
 
+			COSUMER vs PROVIDER
+
+
+Consumer<ProviderName>(
+	builder: (ctx, providername, child) => IconButton(...)
+)
+
+
+	// Consumer can be helpful in the case where you want to change only one part of widget
+	// It helps in optimization and will not rebuild the whole widget when something changes
+
+	// You need to false the listner in Provider. Then you app will be optimized
+
+
+final productsData = Provider.of<Products>(context, listen: false);
+
+
+_______________________________________________________________________
+=======================================================================
+
+
+	
+
+
 
 
 
