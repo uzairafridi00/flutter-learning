@@ -42,8 +42,14 @@ class Products with ChangeNotifier {
     ),
   ];
 
+  var _showOnlyFavorites = false;
+
   List<Product> get items {
     return [..._items];
+  }
+
+  List<Product> get favoriteItems {
+    return _items.where((prodItem) => prodItem.isFavorite).toList();
   }
 
   void addProduct() {
