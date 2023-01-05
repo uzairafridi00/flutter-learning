@@ -84,7 +84,7 @@ MultiProvider(
 	]
 
 
-child: MaterialApp(//...)
+child: MaterialApp(//..)
 
 )
 	
